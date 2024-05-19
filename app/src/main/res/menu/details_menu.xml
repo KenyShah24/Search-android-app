@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/fb_icon"
+        android:icon="@mipmap/fb_icon_round"
+        app:showAsAction="ifRoom"
+        android:title="Compose">
+    </item>
+    <item
+        android:id="@+id/twitter_icon"
+        android:icon="@mipmap/ic_tweet_round"
+        app:showAsAction="ifRoom"
+        android:title="Profile">
+    </item>
+    <item
+        android:id="@+id/fav_icon"
+        android:icon="@drawable/ic_favorites_fill"
+        app:showAsAction="ifRoom"
+        android:title="Compose">
+    </item>
+</menu>

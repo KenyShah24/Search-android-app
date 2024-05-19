@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/artist_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp"
+    cardview:cardBackgroundColor="@color/black"
+    cardview:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="15dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/artist_image"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/artist_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="6dp"
+                        android:layout_marginBottom="10dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="Artist name"
+                        android:textColor="@color/gray"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/artist_follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:text="Followers"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/spotify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:autoLink="web"
+                        android:clickable="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:text="Check out on spotify"
+                        android:textColor="@color/green"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pop_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="Popularity"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/progress_layout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="right">
+
+                        <ProgressBar
+                            android:id="@+id/progress_ring"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_shape"
+                            android:indeterminate="false"
+                            android:progressDrawable="@drawable/progress_bar"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp">
+
+            <TextView
+                android:id="@+id/album_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Popular Albums"
+                android:textColor="@color/gray"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/album_img_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/album_img_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/album_img_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

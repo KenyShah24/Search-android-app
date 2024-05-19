@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="Widget.Theme.EventFinder.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.EventFinder.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/activity_splash</item>
+    </style>
+    <style name="Theme.SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/green</item>
+        <item name="colorSwitchThumbNormal">@color/gray</item>
+        <item name="android:colorForeground">@color/gray</item>
+    </style>
+</resources>

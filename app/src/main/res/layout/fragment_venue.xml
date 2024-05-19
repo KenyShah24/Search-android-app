@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/venue_fragment"
+    tools:context=".VenueFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/card_background"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingHorizontal="30dp">
+    <!--1-->
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/name_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Name value"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:layout_weight="1"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--  2-->
+    <LinearLayout
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/address_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Address value"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:layout_weight="1"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--        3-->
+    <LinearLayout
+        android:id="@+id/city_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/city_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="City/State"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/city_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="City value"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:layout_weight="1"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--        4-->
+    <LinearLayout
+        android:id="@+id/phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/phone_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Contact Info"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/phone_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Phone value"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:layout_weight="1"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/artist_label" />
+    </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/map"
+            tools:context=".VenueFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/venue_card"
+            android:orientation="vertical"
+            android:id="@+id/extra_info"
+            android:padding="20dp"
+            android:paddingHorizontal="30dp">
+
+            <TextView
+                android:id="@+id/open_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:visibility="gone"
+                android:text="Open Hours"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <TextView
+                android:id="@+id/open_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:maxLines="2"
+                android:text="Open hours val"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <TextView
+                android:id="@+id/gen_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:visibility="gone"
+                android:text="General Rules"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <TextView
+                android:id="@+id/gen_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="General value"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <TextView
+                android:id="@+id/child_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:visibility="gone"
+                android:text="Child Rules"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="20dp" />
+            <TextView
+                android:id="@+id/child_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="General value"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="20dp" />
+
+
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
